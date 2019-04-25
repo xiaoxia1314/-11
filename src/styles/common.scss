@@ -1,0 +1,54 @@
+
+html,body{
+    height: 100%;
+}
+body{
+    color: #E0F5FF;
+}
+
+// 公共的颜色
+$color:#E0F5FF;
+$bgColor:#005F8F;
+$activeColor:#49BCF5;
+
+// 清除浮动
+@mixin clearfix() {
+    &:after{
+        content: '';
+        height: 0;
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+// 选项卡的改变
+// 激活的样式
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active.is-closable{
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 6px;
+    background: $bgColor;
+    color: $color;
+    font-size: 12px;
+}
+// 未激活的样式
+.el-tabs__item{
+
+}
+.el-tabs--top.el-tabs--card .el-tabs__item{
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 6px;
+    color:$bgColor;
+    background: #CBEEFF;
+    margin-right: 12px;
+}
+
+.el-tabs--card>.el-tabs__header{
+    border: none;
+}
+.el-tabs--card>.el-tabs__header .el-tabs__nav{
+    border: none;
+}
+
